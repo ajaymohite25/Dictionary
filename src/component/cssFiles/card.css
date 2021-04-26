@@ -1,0 +1,71 @@
+.cardContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 50%;
+  cursor: pointer;
+  margin: 2rem;
+  margin-top: 2.5rem;
+}
+
+.cardTitle {
+  padding: 0.5rem 1rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-style: solid;
+  border-bottom: none;
+  border-width: 1px;
+  border-color: #3f51b5;
+  border-style: solid;
+  border-width: 0.5px;
+  border-bottom-color: lightgray;
+}
+
+.cardBody {
+  line-height: 1.5rem;
+  height: 50%;
+  width: 100%;
+  box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-top: 1rem;
+}
+.cardBody p {
+  padding-left: 1rem;
+  margin-top: 0;
+}
+.fullScreenModal {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.fullScreenModalInnercontainer {
+  padding: 1rem;
+  width: 70%;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: #3f51b5;
+}
+.RemoveButtonContainer {
+  text-align: center;
+}
+.loadingButtonContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.newWordButtonContainer {
+  margin: 2rem;
+  text-align: center;
+}
+.highlighted {
+  color: #3f51b5;
+}
+@media (max-width: 850px) {
+  .card {
+    width: 100%;
+  }
+}
