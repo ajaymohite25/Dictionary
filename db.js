@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 
 mongoose
   .connect(
-    "mongodb+srv://admin:qMW5b5vdNQr1jpzO@tinderclone.g5v0l.mongodb.net/tindercloneDB?retryWrites=true&w=majority",
+    `mongodb+srv://admin:${process.env.MONGO_DB}@tinderclone.g5v0l.mongodb.net/tindercloneDB?retryWrites=true&w=majority`,
     {
       useCreateIndex: true,
       useNewUrlParser: true,
