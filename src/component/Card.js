@@ -76,7 +76,13 @@ function FullScreenDialog(props) {
         TransitionComponent={Transition}
       >
         <AppBar className={classes.appBar}>
-          <Toolbar>
+          <Toolbar
+            style={{
+              backgroundColor: "white",
+              paddingRight: "0",
+              color: "#720d5d",
+            }}
+          >
             <IconButton
               edge="start"
               color="inherit"
@@ -86,7 +92,7 @@ function FullScreenDialog(props) {
               <CloseIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              {props.word.word.toUpperCase()}
+              Word: {props.word.word.toUpperCase()}
             </Typography>
           </Toolbar>
         </AppBar>

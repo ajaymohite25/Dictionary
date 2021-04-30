@@ -1,5 +1,5 @@
 import React from "react";
-import { fade, makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
@@ -10,25 +10,26 @@ const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
   },
-
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
   title: {
     display: "none",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("sm")]: {
       display: "block",
     },
   },
   search: {
     position: "relative",
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.white, 0.15),
+    backgroundColor: "#5D1049",
     "&:hover": {
-      backgroundColor: fade(theme.palette.common.white, 0.25),
+      backgroundColor: "#720D5D",
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,
-
     width: "100%",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("sm")]: {
       marginLeft: theme.spacing(3),
       width: "50%",
     },
@@ -58,7 +59,6 @@ const useStyles = makeStyles((theme) => ({
   },
   sectionDesktop: {
     display: "none",
-
     [theme.breakpoints.up("md")]: {
       display: "flex",
     },
@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function PrimarySearchAppBar(props) {
+function PrimarySearchAppBar(props) {
   const classes = useStyles();
 
   function onSearchChange(e) {
@@ -80,10 +80,17 @@ export default function PrimarySearchAppBar(props) {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar
+        position="static"
+        style={{
+          backgroundColor: "#5D1049",
+          position: "fixed",
+          top: "0",
+        }}
+      >
         <Toolbar>
           <Typography className={classes.title} variant="h6" noWrap>
-            Dictionary
+            Vocab
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
@@ -104,3 +111,4 @@ export default function PrimarySearchAppBar(props) {
     </div>
   );
 }
+export default PrimarySearchAppBar;

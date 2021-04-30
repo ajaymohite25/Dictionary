@@ -1,3 +1,16 @@
+.App {
+  background-color: #5d1049;
+}
 .noWordWarning {
+  margin-top: 2rem;
   text-align: center;
+}
+.allCardsContainer {
+  margin-top: 60px;
+  background-color: white;
+}
+@media (max-width: 700px) {
+  .allCardsContainer {
+    margin-top: 55px;
+  }
 }

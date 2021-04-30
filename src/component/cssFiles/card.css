@@ -17,7 +17,7 @@
   border-style: solid;
   border-bottom: none;
   border-width: 1px;
-  border-color: #3f51b5;
+  border-color: #5d1049;
   border-style: solid;
   border-width: 0.5px;
   border-bottom-color: lightgray;
@@ -47,7 +47,7 @@
   border-style: solid;
   border-width: 1px;
   border-radius: 5px;
-  border-color: #3f51b5;
+  border-color: #5d1049;
 }
 .RemoveButtonContainer {
   text-align: center;
@@ -58,14 +58,25 @@
   align-items: center;
 }
 .newWordButtonContainer {
-  margin: 2rem;
+  position: fixed;
+  bottom: 0;
+  right: 0.5rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
   text-align: center;
 }
 .highlighted {
-  color: #3f51b5;
+  color: #720d5d;
 }
+.allCardsContainer {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
 @media (max-width: 850px) {
   .card {
     width: 100%;
+    margin: 1rem;
+    margin-top: 2rem;
   }
 }

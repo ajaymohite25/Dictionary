@@ -51,13 +51,16 @@ function App() {
           ) : (
             <>
               <SearchBar getSearchQuery={getSearchQuery} />
-              {lengthFilterwords ? (
-                filterWords.map((elem, i) => {
-                  return <Card key={i} word={elem} />;
-                })
-              ) : (
-                <h2 className="noWordWarning">No word found !</h2>
-              )}
+
+              <div className="allCardsContainer">
+                {lengthFilterwords ? (
+                  filterWords.map((elem, i) => {
+                    return <Card key={i} word={elem} />;
+                  })
+                ) : (
+                  <h2 className="noWordWarning">No word found !</h2>
+                )}
+              </div>
               <AddNewWordModal />
             </>
           )}

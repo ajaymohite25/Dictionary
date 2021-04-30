@@ -52,6 +52,7 @@ export default function FormDialog(props) {
     <div>
       <div className="newWordButtonContainer">
         <Fab
+          style={{ backgroundColor: "#5D1049" }}
           className="AddnewWordButton"
           onClick={handleClickOpen}
           color="secondary"
